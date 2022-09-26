@@ -14,6 +14,7 @@ public class Program
         person.ShowData();
     }
 
+    // better to extract the classes in their own files
     public class House
     {
         public int Area { get; set; }
@@ -22,7 +23,7 @@ public class Program
         {
             if (area > 50)
             {
-                area = 200;
+                area = 200; // strange condition
             }
             this.Area = area;
         }
@@ -65,7 +66,7 @@ public class Program
             {
                 if (area > 50)
                 {
-                    throw new Exception();
+                    throw new Exception(); // I believe it is enough to throw the exception. No need for the try catch block.
                 }
 
                 this.Area = area;
